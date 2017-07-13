@@ -14,6 +14,7 @@ data = Util.find_paths(ARGV)
 
 errors = [
   Check::ControlledVocabularies.batch(data),
+  Check::DataSources.batch(data),
   Check::Date.batch(data),
   Check::Encoding.batch(data),
   Check::Entities.batch(data),
